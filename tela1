@@ -1,1 +1,26 @@
-tela 1 em construção
+import 'Dart:io';
+
+void main(List<String> arguments) {
+  print('Informe sua nota');
+  var entradaNota= stdin.readLineSync();
+  var nota= double.parse(entradaNota);
+
+  if(nota<=5.99){
+    var notaQueFaltou= 6 - nota;
+  print( 'Você reprovou! faltou ${notaQueFaltou}');
+} else {
+  print('Parabens voce passou!');
+}
+}
+
+void mai(List<String> arguments) {
+  print('Informe quantos pets quer levar:');
+  var entradaNumPets= stdin.readLineSync();
+  var QPets= double.parse(entradaNumPets);
+
+  if(QPets>=5){
+  print( 'Você só pode levar até 5 pets!');
+} else {
+  print('Divirta-se com sua nova familia!');
+}
+}
