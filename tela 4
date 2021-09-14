@@ -1,1 +1,17 @@
-em contrucao
+import 'package:flutter/material.dart';
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+      return MaterialApp(
+        title: 'Flutter tentativa',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.green, fontSize: 30.5),
+
+      );
+    }
+  }
+  
+  
+}
