@@ -4,6 +4,7 @@ void main(List<String> arguments) {
   print(mensagem);
   }
 
+
 void imprimir(){
   print('Olá pessoas!');
 }
@@ -20,3 +21,19 @@ String devolverOlaNome(String nome) {
   return 'Ola $nome!';
 }
 //Listas e repetições; 
+
+import 'dart:io';
+void main(List<String> arguments) {
+  var nomes= ['Jose', 'Roberta', 'Rose', 'Marrie', 'Jaime', 'Mauricio'];
+  nomes.add( 'Joaquim');
+  nomes.insert(0,'Valentina');
+  nomes.removeAt(1);
+  var quantidadeElementos = nomes.length;
+  print(quantidadeElementos);
+  
+  var contador = 0;
+  while (contador < quantidadeElementos){
+    print(nomes[contador]);
+    contador++;
+  }
+}
