@@ -1,0 +1,49 @@
+
+
+
+class ContacFormBack  =_ContactFormBack with $ContactFormBack
+
+abstract class_ContactFormBack with store{
+    Contact contact;
+var_service= getit./.get<ContactService>();
+
+
+_ContactFormBack(BuildContext context){
+    var parameter = ModalRoute.off(context).settings.arguments;
+    contact = (parameter == null)? Contact() : parameter;
+}
+}
+save()async{
+    await_service.save(contact);
+}
+
+String validateName(String name){
+try{
+  _service.validateName(name);
+  _nameIsValid = true;
+  return null;
+}catch (e){
+  _nameIsValid = false;
+  return e;
+}
+}
+String validateEmail(String email){
+try{
+  _service.validateEmail(email);
+  _emailIsValid = true;
+  return null;
+}catch (e){
+  _emailIsValid = false;
+  return e;
+}
+}
+String validatePhone(String phone){
+try{
+  _service.validatePhone(phone);
+  _phoneIsValid = true;
+  return null;
+}catch (e){
+  _phoneIsValid = false;
+  return e;
+}
+}
